@@ -44,7 +44,7 @@ const Snippet: NextPage = () => {
           </h3>
 
           <button className={styles.button} onClick={evaluate}>Run</button>
-          <button className={styles.button} onClick={share}>Share</button>
+          <button className={styles.button} onClick={share} id="share">Share</button>
         </div>
 
         <textarea id="code" style={{width: "100%", resize: "none"}} rows={25} defaultValue={code}>

@@ -21,6 +21,8 @@ export default async function share() {
             code: code.value
         }),
     })
-    navigator.clipboard.writeText(process.env.VERCEL_URL!)
-    
+    navigator.clipboard.writeText(process.env.NEXT_PUBLIC_VERCEL_URL! + "/p/" + id)
+    .then(() => {
+        document.getElementById("share")!.textContent = "Copied!"
+    })
 }
