@@ -1,11 +1,33 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import evaluate from '../funcs/evaluate'
-import share from '../funcs/share'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import styles from '../../styles/Home.module.css'
+import evaluate from '../../funcs/evaluate'
+import share from '../../funcs/share'
 
-const Home: NextPage = () => {
+const Snippet: NextPage = () => {
+    const [code, setCode] = useState("")
+    const router = useRouter()
+    useEffect(()=>{
+      if(!router.isReady) return;
+      const id = router.asPath.split('/')[2]
+      fetch('/api/load', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            id: id
+        }),
+      })
+      .then((res) => res.json())
+      .then((res) => {
+        setCode(res.code)
+      })  
+  }, [router.isReady]);
+  
     return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +47,7 @@ const Home: NextPage = () => {
           <button className={styles.button} onClick={share}>Share</button>
         </div>
 
-        <textarea id="code" style={{width: "100%", resize: "none"}} rows={25}>
+        <textarea id="code" style={{width: "100%", resize: "none"}} rows={25} defaultValue={code}>
         </textarea>
 
         <textarea id="output" style={{width: "100%", resize: "none"}} rows={15} disabled>
@@ -48,4 +70,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Snippet
