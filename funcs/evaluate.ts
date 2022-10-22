@@ -5,7 +5,7 @@ var pyodide: any = undefined
 export default async function evaluate() {
     if (pyodide === undefined) {
         pyodide = await loadPyodide({
-            indexURL: "/pyodide"
+            indexURL: "https://cdn.jsdelivr.net/pyodide/v0.21.3/full/"
         });
     }
  
