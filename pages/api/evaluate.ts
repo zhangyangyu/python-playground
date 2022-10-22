@@ -1,14 +1,7 @@
-async function main() {
-    let pyodide = await loadPyodide();
-    return pyodide;
-}
-
-let pyodideReadyPromise = main();
-
 export default async function evaluate() {
     const output = document.getElementById("output");
     const code = document.getElementById("code");
-    let pyodide = await pyodideReadyPromise;
+    let pyodide = await loadPyodide();
     try {
         const replaceOut = `import sys, io
 out = io.StringIO()
