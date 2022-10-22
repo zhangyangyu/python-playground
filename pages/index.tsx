@@ -14,14 +14,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Script
-        src="https://cdn.jsdelivr.net/pyodide/v0.21.3/full/pyodide.js"
-        strategy="beforeInteractive"
-      ></Script>
-
       <main>
         <div className={styles.nav}>
-          <img src="/favicon.ico" style={{width: "30px", "margin-right": "10px"}}/>
+          <img src="/favicon.ico" style={{width: "30px", marginRight: "10px"}}/>
           <h3 className={styles.navleft}>
             The Python Playground
           </h3>
@@ -30,10 +25,10 @@ const Home: NextPage = () => {
           <button className={styles.button}>Share</button>
         </div>
 
-        <textarea id="code" style={{width: "100%", resize: "none"}} rows="25">
+        <textarea id="code" style={{width: "100%", resize: "none"}} rows={25}>
         </textarea>
 
-        <textarea id="output" style={{width: "100%", resize: "none"}} rows="15" disabled>
+        <textarea id="output" style={{width: "100%", resize: "none"}} rows={15} disabled>
         </textarea>
       </main>
 
