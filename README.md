@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://www.pingcap.com/tidb-cloud/"><img src=".github/tidbcloud_logo.jpg" alt="TiDB logo" width="250"/></a>
   <a href="https://vercel.com/"><img src=".github/vercel_logo.svg" alt="Vercel logo" width="250"/></a>
-  <a href="https://python.org/"><img src=".github/python_logo.svg" alt="Python logo" width="250"/></a>
+  <a href="https://github.com/pyodide/pyodide"><img src=".github/pyodide_logo.png" alt="Pyodide logo" width="250"/></a>
 </p>
 
 # 一键部署
