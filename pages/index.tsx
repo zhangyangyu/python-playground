@@ -41,6 +41,9 @@ const Home: NextPage = () => {
           <span className={styles.logo}>
             <Image src="/tidbcloud.png" alt="TiDB Cloud Logo" width={98} height={17} />
           </span>
+          <span className={styles.logo}>
+            <Image src="/pyodide.png" alt="Pyodide Logo" width={41} height={17} />
+          </span>
         </a>
       </footer>
     </div>
