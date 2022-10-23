@@ -55,14 +55,13 @@ const Snippet: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a>
           Powered by{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+          </span>
+          <span className={styles.logo}>
+            <Image src="/tidbcloud.png" alt="TiDB Cloud Logo" width={98} height={17} />
           </span>
         </a>
       </footer>
